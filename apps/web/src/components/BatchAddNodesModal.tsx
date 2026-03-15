@@ -13,12 +13,21 @@ import {
   ScrollableDialogHeader,
 } from '~/components/ui/scrollable-dialog'
 
+/** Flattened node representation with its origin (standalone or subscription) */
 interface NodeItem {
   id: string
   name: string
+  /** Display label indicating where this node comes from (subscription tag/link or generic "node") */
   source: string
 }
 
+/**
+ * Modal dialog for batch adding/removing nodes to a group.
+ *
+ * Displays a searchable, selectable list of all available nodes (from both
+ * standalone nodes and subscriptions). On confirm, computes the diff against
+ * `existingNodeIDs` and fires `onSubmit` (newly added) / `onRemove` (unchecked).
+ */
 export function BatchAddNodesModal({
   opened,
   onClose,
@@ -28,8 +37,11 @@ export function BatchAddNodesModal({
 }: {
   opened: boolean
   onClose: () => void
+  /** IDs of nodes already present in the target group */
   existingNodeIDs: string[]
+  /** Called with IDs of newly selected nodes to add */
   onSubmit: (nodeIDs: string[]) => void
+  /** Called with IDs of previously existing nodes that were unchecked */
   onRemove: (nodeIDs: string[]) => void
 }) {
   const { t } = useTranslation()
