@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.25.0](https://github.com/popo1221/daed/compare/v1.24.1...v1.25.0) (2026-03-15)
+
+
+### Features
+
+* add settings ([b94f5b4](https://github.com/popo1221/daed/commit/b94f5b4cb9f4cb7677098dc41bbbcce87d080e91))
+* update version ([5329692](https://github.com/popo1221/daed/commit/53296921d14cffebb8274c0cf3da846b0134fac8))
+
 ## [1.24.1](https://github.com/daeuniverse/daed/compare/v1.24.0...v1.24.1) (2026-02-28)
 
 
