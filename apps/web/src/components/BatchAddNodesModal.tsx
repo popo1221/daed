@@ -155,7 +155,7 @@ export function BatchAddNodesModal({
 
   return (
     <Dialog open={opened} onOpenChange={(open) => !open && handleClose()}>
-      <ScrollableDialogContent size="lg" className="max-h-[80vh] min-h-[80vh]">
+      <ScrollableDialogContent size="lg" className="max-h-[75vh] min-h-[75vh]">
         <ScrollableDialogHeader>
           <DialogTitle>{t('batchAddNodes.title')}</DialogTitle>
           <Input
